@@ -2,4 +2,4 @@
 
 Learning to use GraphQL and Apollo from scratch, which would be using the MERN stack implementation.
 
-[IN PROGRESS]
+[IN PROGRESS & Documetation will come later]
