@@ -23,9 +23,14 @@ class AddBook extends Component {
         }
     }
 
+    submitForm = (event) => {
+        event.preventDefault()
+        console.log(this.state)
+    }
+
     render() {
         return (
-            <form id="add-book">
+            <form id="add-book" onSubmit={this.submitForm}>
                 <div className="field">
                     <label>Book name:</label>
                     <input 
@@ -55,7 +60,11 @@ class AddBook extends Component {
                 </div>
                 <div className="field">
                     <label>Author:</label>
-                    <select>
+                    <select
+                        onChange={(event) => this.setState({
+                            authorId: event.target.value
+                        })}
+                    >
                         <option>Select author</option>
                         {this.displayAuthors()}
                     </select>
