@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
-import { gql } from 'apollo-boost'
 import { graphql } from 'react-apollo'
 
-const getAuthorsQuery = gql `
-    {
-        authors{
-            id
-            name
-            age
-        }
-    }
-`
+import { getAuthorsQuery } from '../queries/queries'
 
 class AddBook extends Component {
+
+    state = {
+        title: '',
+        genre: '',
+        description: '',
+        authorId: ''
+    }
 
     displayAuthors(){
         var data = this.props.data
@@ -30,11 +28,30 @@ class AddBook extends Component {
             <form id="add-book">
                 <div className="field">
                     <label>Book name:</label>
-                    <input type="text" />
+                    <input 
+                        type="text" 
+                        onChange={(event) => this.setState({
+                            title: event.target.value
+                        })}
+                    />
+                </div>
+                <div className="field">
+                    <label>Description:</label>
+                    <input 
+                        type="textArea" 
+                        onChange={(event) => this.setState({
+                            description: event.target.value
+                        })}
+                    />
                 </div>
                 <div className="field">
                     <label>Genre</label>
-                    <input type="text" />
+                    <input 
+                        type="text" 
+                        onChange={(event) => this.setState({
+                            genre: event.target.value
+                        })}
+                    />
                 </div>
                 <div className="field">
                     <label>Author:</label>
