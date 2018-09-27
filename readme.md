@@ -7,6 +7,8 @@
 
 This is my simple application use to learn GraphQL and Apollo while using the MERN stack. This application on the front can add books with title, small description, genre of type and add the author corresponding to the book. However, in the GraphQL console it has a full crud functionality for both authors and books.
 
+Technology stack: JavaScript ES6, MongoDB, Mongoose, GraphQL, Apollo, CSS, ReactJs, ExpressJs
+
 ### Installion
 
 Requirements:
@@ -23,4 +25,3 @@ The application will execute on port 3000 for the frontend and GraphQL console o
 ### Credits
 
 I would like to thanks Shaun from "freeCodeCamp.org" for the tutorial.
-
